@@ -8,11 +8,14 @@ public abstract class Building {
     private LocalDate dateOfConstruction;
     private int numberOfRooms;
 
-    public Building(String name, String architect, LocalDate dateOfConstruction, int numberOfRooms){
+    private ArrayList<Building> buildingType;
+
+    public Building(String name, String architect, LocalDate dateOfConstruction, int numberOfRooms, ArrayList<Building> buildingType){
         this.name = name;
         this.architect = architect;
         this.dateOfConstruction = dateOfConstruction;
         this.numberOfRooms = numberOfRooms;
+        this.buildingType = buildingType;
     }
 
     //Getters
@@ -33,8 +36,11 @@ public abstract class Building {
         return numberOfRooms;
     }
 
-    //Setters
+    public ArrayList<Building> getBuildingType() {
+        return buildingType;
+    }
 
+    //Setters
 
     public void setName(String name) {
         this.name = name;
@@ -50,5 +56,8 @@ public abstract class Building {
 
     public void setNumberOfRooms(int numberOfRooms) {
         this.numberOfRooms = numberOfRooms;
+    }
+    public void setBuildingType(ArrayList<Building> buildingType) {
+        this.buildingType = buildingType;
     }
 }
