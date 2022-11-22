@@ -9,6 +9,7 @@ public class Architect {
     public Architect (ArrayList<Object> portfolio){
         this.portfolio = portfolio;
     }
+    
 //getters & setters
     public ArrayList<Object> getPortfolio() {
         return portfolio;
